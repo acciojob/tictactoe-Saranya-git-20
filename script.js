@@ -6,7 +6,7 @@ const submitBtn = document.getElementById('submit');
     const cells = document.querySelectorAll('.cell');
     const gameBoard = document.getElementById('game-board');
 
-    let currentPlayer = 'X';
+    let currentPlayer = 'x';
     let player1 = '';
     let player2 = '';
     let gameActive = true;
@@ -17,7 +17,7 @@ const submitBtn = document.getElementById('submit');
       [1,5,9],[3,5,7]          // diagonals
     ];
 
-    const getCurrentPlayerName = () => currentPlayer === 'X' ? player1 : player2;
+    const getCurrentPlayerName = () => currentPlayer === 'x' ? player1 : player2;
 
     submitBtn.addEventListener('click', () => {
       player1 = player1Input.value.trim();
@@ -50,7 +50,7 @@ const submitBtn = document.getElementById('submit');
           return;
         }
 
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        currentPlayer = currentPlayer === 'x' ? 'o' : 'x';
         messageDiv.textContent = `${getCurrentPlayerName()}, you're up`;
       });
     });
